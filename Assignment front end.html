@@ -1,0 +1,47 @@
+<!DOCTYEP html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+       
+       .LOGIN-button{
+        background-color: #13f7d1;
+        color: white;
+        padding: 5px 7cqbpx;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        font-size: 15px;
+       }
+       LOGIN-button: hover
+       { background-color: #218838;}
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form id="MY Form">
+        <label for="name">NAME:</label><br>
+        <input type="text" id="name"name="name" required><br><br>
+
+        <label for="username">USERNAME :</label><br> 
+        <input type="text" id="username"name="username" required><br><br>
+
+        <label for="Email">EMAIL:</label><br>
+        <input type="text" id="email"name="email" required><br><br>
+
+<button class="LOGIN-button">LOGIN</button>
+
+    </form>
+    <script>
+        document.getElementById("my form").addEventListener("LOGIN",function(event){const inputs=document.querySelectorAll('#myform input[type="text"]');
+            for(let input of inputs){
+                if (input.value.trim()===""){
+                    alert("please fill in all reduired fields.");
+                    event.preventDefault();
+                    return;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
